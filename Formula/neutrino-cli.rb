@@ -1,25 +1,25 @@
 class NeutrinoCli < Formula
   desc "Neutrino CLI tool"
   homepage "https://github.com/lightconelabs/neutrino"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.2/neutrino-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "1c945f939945439a17e7aa06afe811aca2be1da30c95a14f26fea12664955437"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "aa8945403533a1d8777130fccbea438de7933e0c8708431e94507f85b0618621"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.2/neutrino-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "180f48827eaf71f23fd76a3af943b0d1ed35f834eac526d1b26b12069606c5c3"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "828348e130f0ae7540b372dce055e12492061fd86e4ff4a1bb593f9a5ceccfe0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.2/neutrino-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "28983d710cf444e3187915079020c096bb082b8a5fe69eb96b672af96f987a20"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4c6f7a66b7e90677c79c1aad0caca12396a17bc573e22adefd356914346fd37c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.2/neutrino-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c0cb861c92c92187d10bcd747c2c645122ec9e1d68f6d6e9986e257fb6d2c433"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "40884e60c3f9892a8030229b851c6ad6f94f121912ce19242fffdf7ad4d767b2"
     end
   end
   license "MIT"
