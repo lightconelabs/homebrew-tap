@@ -1,25 +1,25 @@
 class NeutrinoCli < Formula
   desc "Neutrino CLI tool"
   homepage "https://github.com/lightconelabs/neutrino"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "aa8945403533a1d8777130fccbea438de7933e0c8708431e94507f85b0618621"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.4/neutrino-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "02d9b7ca2fc86452609fad1c4d53ce2e3244b42fca59815050c07ec8e8ace9c1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "828348e130f0ae7540b372dce055e12492061fd86e4ff4a1bb593f9a5ceccfe0"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.4/neutrino-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "38dc32bb4b87d97d58df02728763d06ce87de81b6e77a7cec2409d543758dbf4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4c6f7a66b7e90677c79c1aad0caca12396a17bc573e22adefd356914346fd37c"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.4/neutrino-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e5c5ed95fbeeddadd9190e27fd841de89da281aca0f2d5d1816a530af5ae578e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.3/neutrino-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "40884e60c3f9892a8030229b851c6ad6f94f121912ce19242fffdf7ad4d767b2"
+      url "https://github.com/lightconelabs/neutrino/releases/download/v0.1.4/neutrino-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "735271298df142ab6ed7f0e0a4cebe7b5739dec1ee41baa5fa1479d271e11480"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class NeutrinoCli < Formula
   end
 
   def install
-    bin.install "neutrino" if OS.mac? && Hardware::CPU.arm?
-    bin.install "neutrino" if OS.mac? && Hardware::CPU.intel?
-    bin.install "neutrino" if OS.linux? && Hardware::CPU.arm?
-    bin.install "neutrino" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "neutrino"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "neutrino"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "neutrino"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "neutrino"
+    end
 
     install_binary_aliases!
 
